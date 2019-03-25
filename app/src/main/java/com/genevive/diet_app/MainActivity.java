@@ -6,12 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     List<Food> meals = new ArrayList<>();
     GridLayout gridLayout;
-    LinearLayout linearLayout;
+    TextView amount;
+    Button btn;
 
 
     @Override
@@ -76,26 +75,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-//        amount.setText("Total Amount");
-//
-//        btn.setText("Calculate");
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                calculate();
-//            }
-//        });
-//
-//
-//        gridLayout.addView(amount, w * 2, 200);
-//        gridLayout.addView(btn, w , 200);
-
-        linearLayout = findViewById(R.id.layout);
-        linearLayout.addView(gridLayout);
         setContentView(gridLayout);
-    }
-
-    void calculate(){
-
     }
 }
